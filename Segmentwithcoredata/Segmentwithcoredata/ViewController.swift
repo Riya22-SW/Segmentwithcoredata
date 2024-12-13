@@ -173,35 +173,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    Swipe delete
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete=UIContextualAction(style: .destructive, title: "delete"){action,source,completion in
-            self.jokearr1.remove(at: indexPath.row)
+        
+        if tableView == tablevc2{
+            let delete=UIContextualAction(style: .destructive, title: "delete"){action,source,completion in
+                
+                let jokeToDelete = self.jokearr1[indexPath.row]
+                self.deletecd(Jokes: jokeToDelete)
+                self.jokearr1.remove(at: indexPath.row)
+                self.tablevc2.reloadData()
+            }
+            let configure=UISwipeActionsConfiguration(actions: [delete])
+            configure.performsFirstActionWithFullSwipe=false
+            return configure
+        }else {
             
-            let jokeToDelete = self.jokearr1[indexPath.row]
-            self.deletecd(Jokes: jokeToDelete)
-         
-            
-            self.tablevc2.reloadData()
+            let configure=UISwipeActionsConfiguration(actions: [])
+            configure.performsFirstActionWithFullSwipe=false
+            return configure
         }
-        let configure=UISwipeActionsConfiguration(actions: [delete])
-        configure.performsFirstActionWithFullSwipe=false
-        return configure
-        
-        
-        
     }
     
     //Swipe update
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let update = UIContextualAction(style: .normal, title: "update"){(action,view,completionHandler)in
-            self.selectedjoke = self.jokearr1[indexPath.row]
-            self.performSegue(withIdentifier: "GoToUpdate", sender: self)
+        
+        if tableView == tablevc2{
+            let update = UIContextualAction(style: .normal, title: "update"){(action,view,completionHandler)in
+                self.selectedjoke = self.jokearr1[indexPath.row]
+                self.performSegue(withIdentifier: "GoToUpdate", sender: self)
+                
+                completionHandler(true)
+            }
+            update.backgroundColor = .systemBlue
             
-            completionHandler(true)
+            let updateAction=UISwipeActionsConfiguration(actions: [update])
+            return updateAction
+        }else{
+            let updateAction=UISwipeActionsConfiguration(actions: [])
+            return updateAction
         }
-        update.backgroundColor = .systemBlue
-
-       let updateAction=UISwipeActionsConfiguration(actions: [update])
-        return updateAction
     }
     
     
