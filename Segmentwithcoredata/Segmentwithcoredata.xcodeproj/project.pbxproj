@@ -19,7 +19,8 @@
 		846427DD2D0AC54200D3CD49 /* Jokecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846427DA2D0AC54200D3CD49 /* Jokecell.swift */; };
 		846427DF2D0AC5F800D3CD49 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846427DE2D0AC5F800D3CD49 /* ApiManager.swift */; };
 		846427E22D0AC61700D3CD49 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 846427E12D0AC61700D3CD49 /* Alamofire */; };
-		846427E42D0AC6FC00D3CD49 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846427E32D0AC6FC00D3CD49 /* UserModel.swift */; };
+		84C1E3042D0BE7D000716EC1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1E3032D0BE7D000716EC1 /* DetailVC.swift */; };
+		84C1E3062D0BFA7E00716EC1 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1E3052D0BFA7E00716EC1 /* UpdateVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,8 @@
 		846427DA2D0AC54200D3CD49 /* Jokecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokecell.swift; sourceTree = "<group>"; };
 		846427DB2D0AC54200D3CD49 /* Jokecell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Jokecell.xib; sourceTree = "<group>"; };
 		846427DE2D0AC5F800D3CD49 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
-		846427E32D0AC6FC00D3CD49 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		84C1E3032D0BE7D000716EC1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		84C1E3052D0BFA7E00716EC1 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 				846427DA2D0AC54200D3CD49 /* Jokecell.swift */,
 				846427DB2D0AC54200D3CD49 /* Jokecell.xib */,
 				846427DE2D0AC5F800D3CD49 /* ApiManager.swift */,
-				846427E32D0AC6FC00D3CD49 /* UserModel.swift */,
+				84C1E3032D0BE7D000716EC1 /* DetailVC.swift */,
+				84C1E3052D0BFA7E00716EC1 /* UpdateVC.swift */,
 			);
 			path = Segmentwithcoredata;
 			sourceTree = "<group>";
@@ -165,11 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C1E3062D0BFA7E00716EC1 /* UpdateVC.swift in Sources */,
 				846427CC2D0AC21100D3CD49 /* Segmentwithcoredata.xcdatamodeld in Sources */,
 				846427C62D0AC21100D3CD49 /* ViewController.swift in Sources */,
-				846427E42D0AC6FC00D3CD49 /* UserModel.swift in Sources */,
 				846427D92D0AC4D200D3CD49 /* JokeModel.swift in Sources */,
 				846427DF2D0AC5F800D3CD49 /* ApiManager.swift in Sources */,
+				84C1E3042D0BE7D000716EC1 /* DetailVC.swift in Sources */,
 				846427C22D0AC21100D3CD49 /* AppDelegate.swift in Sources */,
 				846427DD2D0AC54200D3CD49 /* Jokecell.swift in Sources */,
 				846427C42D0AC21100D3CD49 /* SceneDelegate.swift in Sources */,
